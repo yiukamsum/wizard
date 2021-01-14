@@ -33,9 +33,17 @@
                 @endif
 
                 <div class="form-group">
+                    <label for="editor-lang" class="bmd-label-floating">@lang('common.lang')</label>
+                    <select id="editor-lang" class="form-control" name="lang">
+                        <option value="en">English</option>
+                        <option value="zh">簡體中文</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit"
-                                class="btn btn-success btn-raised" {{ ldap_enabled() ? 'disabled' : '' }}>@lang('common.btn_save')</button>
+                                class="btn btn-success btn-raised">@lang('common.btn_save')</button>
                     </div>
                 </div>
             </form>

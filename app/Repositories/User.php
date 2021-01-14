@@ -22,6 +22,7 @@ use Lab404\Impersonate\Services\ImpersonateManager;
  * @property string $password
  * @property integer $role
  * @property integer $status
+ * @property string $lang
  * @property string $objectguid
  * @property Carbon $created_at
  * @property Carbon $updated_at
@@ -76,6 +77,7 @@ class User extends Authenticatable
             'password',
             'role',
             'status',
+            'lang',
             'objectguid',
         ];
 

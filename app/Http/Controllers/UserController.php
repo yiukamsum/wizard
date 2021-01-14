@@ -134,11 +134,12 @@ class UserController extends Controller
         );
 
         $username = $request->input('username');
-
+        $lang = $request->input('lang');
         \Auth::user()->update([
             'name' => $username,
+            'lang' => $lang,
         ]);
-
+        $request->session()->put('locale', $lang);
         $this->alertSuccess(__('common.operation_success'));
 
         return redirect(wzRoute('user:basic'));

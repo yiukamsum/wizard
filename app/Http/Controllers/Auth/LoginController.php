@@ -56,5 +56,6 @@ class LoginController extends Controller
 
             throw ValidationException::withMessages(['email' => '用户已禁用']);
         }
+        $request->session()->put('locale', $user->lang);
     }
 }
